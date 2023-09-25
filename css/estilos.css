@@ -6,9 +6,22 @@
     font-style: italic;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
+body {
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+header h1 {
+  text-align: center;
 }
 
 ul {
@@ -16,6 +29,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     font-weight: bold;
     display: inline-block;
@@ -38,26 +52,28 @@ a {
     grid-template-rows: auto auto;
 }
 
-.top {
+header {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-top: 2%;
-    padding-bottom: 3%;
 }
 
-.titletop {
-    text-align: center;
-}
+.top-navegation {
+    display: flex;
+    gap: 0.5rem;
+  }
 
-.titletop>h1{
+.top-navegation li{
     margin-bottom: 10px;
 }
 
-.bottom{
+.main-content{
     display: grid;
-    grid-template-columns: auto auto;
-    margin-left: 10%;
+    gap: 2rem;
+    grid-template-columns: 1.5fr 0.5fr;
+    margin-top: 1rem;
+    border-bottom: 1px solid black;
 }
 
 .left{
@@ -70,17 +86,14 @@ a {
     padding-left: 15px;
 }
 
-.titlebot{
-    font-size:larger;
+.post-title {
+    font-size: larger;
     font-weight: 900;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-.titlebot1{
-    font-size:larger;
-    font-weight: 900;
-}
-
-.titlebot2{
+.categories-title {
     font-size:larger;
     font-weight: 900;
     margin-top: 20px;
@@ -95,20 +108,34 @@ p{
     padding-bottom: 5px;
 }
 
-.post2 { 
-    padding-top: 10px;
+.post {
+    background-color: rgb(204, 202, 202);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-style: italic;
+    padding: 0.5rem;
 }
 
-.comments{
-    font-size: small;
-    font-weight: bold;
-    background-color:rgb(169, 158, 140);
-    border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 5px;
+.nav__recent {
+    margin-bottom: 2.5rem;
+}
+
+.nav__recent li,
+.nav__categories li {
+    margin-bottom: 1rem;
 }
 
 footer {
     text-align: center;
     padding-top: 10px;
 }
+
+.left {
+    border-bottom: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(88, 88, 88);
+    font-weight: 800;
+  }
